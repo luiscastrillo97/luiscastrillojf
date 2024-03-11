@@ -2,20 +2,20 @@ import { NavLinks } from "./interfaces";
 
 export const navLinks: NavLinks[] = [
   {
+    id: "about",
     name: "About",
-    url: "/#about",
   },
   {
+    id: "jobs",
     name: "Experience",
-    url: "/#jobs",
   },
   {
+    id: "projects",
     name: "Work",
-    url: "/#projects",
   },
   {
+    id: "contact",
     name: "Contact",
-    url: "/#contact",
   },
 ];
 

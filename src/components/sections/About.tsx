@@ -33,8 +33,15 @@ const About = () => {
             </p>
           </div>
           <div className="flex w-2/5 justify-center pr-9">
-            <div className="w-full h-fit">
-              <Image src={photo} alt="Luis' photo" className="rounded-xl" />
+            <div className="w-full h-fit z-0">
+              <Image
+                src={photo}
+                alt="Luis' photo"
+                className="rounded-xl"
+                width="1200"
+                height="1200"
+                placeholder="blur"
+              />
             </div>
           </div>
         </div>

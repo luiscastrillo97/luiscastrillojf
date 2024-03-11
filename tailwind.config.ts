@@ -18,6 +18,9 @@ const config: Config = {
       fontSize: {
         "clamp-h1": "clamp(2.5rem, 8vw, 4rem)",
       },
+      textColor: {
+        primary: "#E7BCDE",
+      },
     },
   },
   plugins: [],

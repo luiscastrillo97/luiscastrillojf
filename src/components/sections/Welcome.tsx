@@ -1,6 +1,6 @@
 const WelcomeSection = () => {
   return (
-    <section className="flex flex-col items-start justify-center pt-24 h-auto min-h-screen">
+    <section className="flex flex-col items-start justify-center pt-28 h-auto min-h-screen">
       <div>
         <h5 className="text-xl">Hi, my name is</h5>
       </div>

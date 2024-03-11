@@ -12,7 +12,7 @@ import { MainLayout } from "@/layouts";
 
 const Root = () => {
   return (
-    <div className="min-h-screen scroll-smooth">
+    <>
       <Header />
       <FixedSides />
       <MainLayout>
@@ -23,7 +23,7 @@ const Root = () => {
         <Contact />
         <Footer />
       </MainLayout>
-    </div>
+    </>
   );
 };
 

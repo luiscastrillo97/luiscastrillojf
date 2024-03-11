@@ -9,7 +9,7 @@ const Work = () => {
   return (
     <section id="projects" className="py-24 h-fit flex flex-col">
       <h2 className="text-3xl">Some Things I Have Built</h2>
-      <article className="my-10">
+      <article className="mt-10">
         <div className="grid grid-cols-12">
           <div
             id="image"
@@ -26,7 +26,7 @@ const Work = () => {
           </div>
           <div className="row-span-full col-span-6 col-end-13 self-center text-right flex flex-col gap-4">
             <h2 className="font-semibold text-2xl">Advance TODO</h2>
-            <div className="z-10 bg-blue-500 p-5 rounded-md">
+            <div className="z-10 bg-[#1B1A55] p-5 rounded-md">
               <p className="text-white">
                 This tool is based on the Todo app challenge from Frontend
                 Mentor. It has a responsive design, an it allows you to switch
@@ -63,7 +63,7 @@ const Work = () => {
           </div>
         </div>
       </article>
-      <article className="my-10">
+      <article className="mt-10">
         <div className="grid grid-cols-12">
           <div className="row-span-full col-start-1 col-span-6 self-center text-left flex flex-col gap-4">
             <h2 className="font-semibold text-2xl">URL Shortener</h2>
@@ -71,8 +71,8 @@ const Work = () => {
               <p className="text-white">
                 This tool allows you to manage your URLs to share them with
                 whoever you want. Also, since it is integrated with Firebase,
-                you can register, log in and store your urls. It has an adaptive
-                design.
+                you can register, log in and store your urls. It has a
+                responsive design.
               </p>
             </div>
             <ul className="z-10 flex justify-start gap-5 flex-wrap">
@@ -113,7 +113,7 @@ const Work = () => {
           </div>
         </div>
       </article>
-      <article className="my-10">
+      <article className="mt-10">
         <div className="grid grid-cols-12">
           <div
             id="image"
@@ -133,7 +133,7 @@ const Work = () => {
             <div className="z-10 bg-blue-500 p-5 rounded-md">
               <p className="text-white">
                 This tool allows you to add, complete and delete the tasks you
-                want. It has an adaptive design.
+                want. It has an responsive design.
               </p>
             </div>
             <ul className="z-10 flex justify-end gap-5 flex-wrap">
