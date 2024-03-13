@@ -19,12 +19,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         id="layout-body"
-        className={`${inter.className} bg-white dark:bg-[#070F2B] min-h-screen min-w-screen text-primary overflow-x-hidden`}
+        className={`${inter.className} bg-primary min-h-screen min-w-screen text-primary overflow-x-hidden dark:bg-dark-primary dark:text-dark-primary transition-color ease-[cubic-bezier(0.645,0.045,0.355,1)] duration-300`}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem={false}
+          disableTransitionOnChange
         >
           {children}
         </ThemeProvider>

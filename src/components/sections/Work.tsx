@@ -26,8 +26,8 @@ const Work = () => {
           </div>
           <div className="row-span-full col-span-6 col-end-13 self-center text-right flex flex-col gap-4">
             <h2 className="font-semibold text-2xl">Advance TODO</h2>
-            <div className="z-10 bg-[#1B1A55] p-5 rounded-md">
-              <p className="text-white">
+            <div className="z-10 bg-secondary p-5 rounded-md dark:bg-dark-secondary">
+              <p className="dark:text-dark-primary">
                 This tool is based on the Todo app challenge from Frontend
                 Mentor. It has a responsive design, an it allows you to switch
                 between dark and light themes, add the tasks you want, filter by

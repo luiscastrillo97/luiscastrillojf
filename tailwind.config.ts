@@ -19,7 +19,14 @@ const config: Config = {
         "clamp-h1": "clamp(2.5rem, 8vw, 4rem)",
       },
       textColor: {
-        primary: "#E7BCDE",
+        primary: "#0F1035",
+        "dark-primary": "#7FC7D9",
+      },
+      backgroundColor: {
+        primary: "#DCF2F1",
+        secondary: "#B4D4FF",
+        "dark-primary": "#070F2B",
+        "dark-secondary": "#1B1A55",
       },
     },
   },

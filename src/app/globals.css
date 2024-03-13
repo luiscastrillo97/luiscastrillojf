@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-    --primary: white;
-    --secondary: black;
+    --primary: #DCF2F1;
+    --secondary: #365486;
   }
 
 [class='dark'] {

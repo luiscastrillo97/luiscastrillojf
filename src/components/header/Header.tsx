@@ -32,9 +32,9 @@ const Header = () => {
   return (
     <>
       <header
-        className={`${!show ? "fixed -top-16" : "fixed top-0"} ${
+        className={`${show ? "top-0" : "-top-16"} ${
           onTop ? "h-24" : "h-16"
-        } backdrop-blur-md z-30 bg-opacity-70 w-full flex items-center bg-[#070F2B] transition-all ease-[cubic-bezier(0.645,0.045,0.355,1)] duration-300`}
+        } fixed backdrop-blur-md z-30 w-full flex items-center bg-primary/70 dark:bg-dark-primary/70 transition-all ease-[cubic-bezier(0.645,0.045,0.355,1)] duration-300`}
       >
         <div className="w-full flex justify-between items-center px-8 lg:px-10 xl:px-14">
           <Icon />
