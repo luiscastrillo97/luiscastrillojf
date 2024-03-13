@@ -17,7 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-[#070F2B] min-h-screen scroll-smooth text-primary `}
+        id="layout-body"
+        className={`${inter.className} bg-[#070F2B] min-h-screen min-w-screen text-primary overflow-x-hidden`}
       >
         {children}
       </body>

@@ -1,6 +1,10 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
+
 import Nav from "./Nav";
+import SideBar from "./SideBar";
+import Icon from "./Icon";
+import BottomShadow from "./BottomShadow";
 
 const Header = () => {
   const [show, setShow] = useState(true);
@@ -8,13 +12,13 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const controlNavbar = useCallback(() => {
-    if (window.scrollY > lastScrollY) {
+    if (window.scrollY > lastScrollY && window.scrollY > 0) {
       setShow(false);
     } else {
       setShow(true);
     }
 
-    setOnTop(window.scrollY === 0 ? true : false);
+    setOnTop(window.scrollY <= 0 ? true : false);
     setLastScrollY(window.scrollY);
   }, [lastScrollY]);
 
@@ -28,17 +32,17 @@ const Header = () => {
   return (
     <>
       <header
-        className={`${!show ? "fixed -top-20" : "fixed top-0"} ${
-          onTop ? "h-24" : "h-20"
-        } backdrop-blur-md z-40 bg-opacity-70 w-full flex juatify-center items-center bg-[#070F2B] transition-all ease-[cubic-bezier(0.645,0.045,0.355,1)] duration-200`}
+        className={`${!show ? "fixed -top-16" : "fixed top-0"} ${
+          onTop ? "h-24" : "h-16"
+        } backdrop-blur-md z-30 bg-opacity-70 w-full flex items-center bg-[#070F2B] transition-all ease-[cubic-bezier(0.645,0.045,0.355,1)] duration-300`}
       >
-        <Nav display={``} />
+        <div className="w-full flex justify-between items-center px-8 lg:px-10 xl:px-14">
+          <Icon />
+          <Nav />
+          <SideBar />
+        </div>
       </header>
-      <div
-        className={`${
-          onTop ? "hidden" : show ? "fixed top-20" : "fixed top-0"
-        } z-50 h-4 w-full border-none bg-gradient-to-b from-black from-0% to-transparent to-90% opacity-20 transition-all ease-linear duration-200`}
-      ></div>
+      <BottomShadow onTop={onTop} show={show} />
     </>
   );
 };

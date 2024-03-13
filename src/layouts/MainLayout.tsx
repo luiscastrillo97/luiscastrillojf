@@ -6,7 +6,10 @@ interface Props {
 
 const MainLayout = ({ children }: Props) => {
   return (
-    <main className="mx-auto w-[77.5%] min-h-screen scroll-smooth">
+    <main
+      id="main-layout"
+      className="mx-auto w-[77.5%] min-h-screen scroll-smooth"
+    >
       {children}
     </main>
   );

@@ -12,7 +12,7 @@ const WelcomeSection = () => {
           I am a Software Developer
         </h2>
       </div>
-      <div className="w-[600px] my-5">
+      <div className="my-5">
         <p className="text-xl">
           My passion for programming and development is reflected in my ability
           to skillfully use languages such as JavaScript and Python. My work
