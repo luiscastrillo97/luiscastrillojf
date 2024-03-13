@@ -1,16 +1,23 @@
 "use client";
-
-import { useState } from "react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { FiSun } from "react-icons/fi";
 import { BsMoonStars } from "react-icons/bs";
 
 const SwitchTheme = () => {
-  const [isChecked, setIsChecked] = useState(true);
+  const { theme, setTheme } = useTheme();
+  const [isChecked, setIsChecked] = useState(false);
+
+  useEffect(() => {
+    setIsChecked(theme === "dark");
+  }, [theme]);
 
   const handleOnChange = (event: any) => {
     const { checked } = event.target;
     setIsChecked(checked);
+    setTheme(checked ? "dark" : "light");
   };
+
   return (
     <label className="inline-flex items-center cursor-pointer ">
       <input

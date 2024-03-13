@@ -56,7 +56,7 @@ const SideBar = () => {
       <MenuButton handleOnClick={handleOnClick} showSideBar={showSideBar} />
       <div
         className={`fixed ${
-          showSideBar ? "right-0" : "-right-[400px]"
+          showSideBar ? "right-0" : "-right-[450px]"
         } h-screen w-4/6 sm:w-[400px] top-0 bg-[#1B1A55] transition-all ease-[cubic-bezier(0.645,0.045,0.355,1)] duration-200`}
       >
         <nav className="flex flex-col justify-center items-center gap-20 h-full w-full">
