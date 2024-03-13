@@ -44,3 +44,9 @@ export const socialMedia = [
     name: "twitter",
   },
 ];
+
+export const navLinksClass =
+  "transition-all hover:scale-105 hover:text-black dark:hover:text-dark-secondary";
+
+export const sideLinksClass =
+  "transition-all hover:-translate-y-1 hover:text-black dark:hover:text-dark-secondary";

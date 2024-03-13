@@ -1,3 +1,4 @@
+import { sideLinksClass } from "@/config";
 import React from "react";
 
 const RightSide = () => {
@@ -6,7 +7,7 @@ const RightSide = () => {
       <div className="h-full flex justify-center">
         <div className="flex flex-col items-center justify-between gap-10">
           <div
-            className="transition-all hover:-translate-y-1 font-semibold"
+            className={`${sideLinksClass} font-semibold`}
             style={{ writingMode: "vertical-lr", textOrientation: "mixed" }}
           >
             <a href="mailto:luiscastrillojfgmail.com">

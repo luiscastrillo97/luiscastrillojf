@@ -1,5 +1,5 @@
 "use client";
-import { navLinks } from "@/config";
+import { navLinks, navLinksClass } from "@/config";
 import useHash from "@/hooks/useHash";
 import Link from "next/link";
 import { SetStateAction } from "react";
@@ -26,7 +26,7 @@ const NavLinks = ({ setShowSideBar }: Props) => {
           <button
             type="button"
             onClick={() => handleClickScroll(id)}
-            className="cursor-pointer hover:scale-105 font-semibold transition-all"
+            className={`cursor-pointer font-semibold ${navLinksClass}`}
           >
             <Link href={`/#${id}`} scroll={false}>
               {name}

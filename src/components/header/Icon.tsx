@@ -1,6 +1,8 @@
+import { navLinksClass } from "@/config";
+
 const Icon = () => {
   return (
-    <a href="/" className="transition-all hover:scale-105">
+    <a href="/" className={navLinksClass}>
       <p className="text-xl font-semibold text-nowrap">{`<LC />`}</p>
     </a>
   );
