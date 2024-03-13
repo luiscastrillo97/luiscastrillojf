@@ -36,6 +36,10 @@ const config: Config = {
         "dark-secondary": "#1B1A55",
         "dark-tertiary": "#B4D4FF",
       },
+      borderColor: {
+        primary: "#0F1035",
+        "dark-primary": "#B4D4FF",
+      },
     },
   },
   plugins: [],

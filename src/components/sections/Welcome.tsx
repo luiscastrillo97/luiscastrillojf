@@ -1,19 +1,21 @@
 const WelcomeSection = () => {
   return (
-    <section className="flex flex-col items-start justify-center pt-28 h-auto min-h-screen">
+    <section className="flex flex-col items-start justify-center pt-28 h-auto min-h-screen gap-5">
       <div>
-        <h5 className="text-xl">Hi, my name is</h5>
+        <h5 className="text-base md:text-lg">Hi, my name is</h5>
       </div>
       <div>
-        <h2 className="text-clamp-h1 font-semibold ">Luis Castrillo</h2>
-      </div>
-      <div>
-        <h2 className="text-clamp-h1 font-semibold">
-          I am a Software Developer
+        <h2 className="text-clamp-h1 font-semibold leading-none">
+          Luis Castrillo.
         </h2>
       </div>
-      <div className="my-5">
-        <p className="text-xl">
+      <div>
+        <h2 className="text-clamp-h1 font-semibold leading-none text-secondary dark:text-dark-tertiaty">
+          I am a Software Developer.
+        </h2>
+      </div>
+      <div>
+        <p className="text-base md:text-lg">
           My passion for programming and development is reflected in my ability
           to skillfully use languages such as JavaScript and Python. My work
           focus is on addressing challenges related to flexibility, scalability,
@@ -24,7 +26,7 @@ const WelcomeSection = () => {
       <div>
         <button
           type="button"
-          className="p-3 bg-blue-600 border-2 rounded-md text-white"
+          className="p-3 bg-primary text-primary font-semibold rounded-md border border-primary hover:bg-secondary dark:text-dark-primary dark:bg-dark-primary dark:border-dark-primary dark:hover:bg-dark-secondary"
         >
           Resume
         </button>

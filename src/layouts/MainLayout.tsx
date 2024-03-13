@@ -8,7 +8,7 @@ const MainLayout = ({ children }: Props) => {
   return (
     <main
       id="main-layout"
-      className="mx-auto w-[77.5%] min-h-screen scroll-smooth"
+      className="mx-auto w-5/6 md:w-[75.5%] min-h-screen scroll-smooth"
     >
       {children}
     </main>
