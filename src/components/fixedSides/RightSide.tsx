@@ -7,7 +7,7 @@ const RightSide = () => {
       <div className="h-full flex justify-center">
         <div className="flex flex-col items-center justify-between gap-10">
           <div
-            className={`${sideLinksClass} font-semibold`}
+            className="font-semibold transition-all hover:-translate-y-1 hover:text-black dark:hover:text-dark-secondary"
             style={{ writingMode: "vertical-lr", textOrientation: "mixed" }}
           >
             <a href="mailto:luiscastrillojfgmail.com">

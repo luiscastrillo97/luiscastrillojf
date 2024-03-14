@@ -26,7 +26,7 @@ const NavLinks = ({ setShowSideBar }: Props) => {
           <button
             type="button"
             onClick={() => handleClickScroll(id)}
-            className={`cursor-pointer font-semibold ${navLinksClass}`}
+            className={`cursor-pointer font-semibold transition-all hover:scale-105 hover:text-black dark:hover:text-dark-secondary`}
           >
             <Link href={`/#${id}`} scroll={false}>
               {name}

@@ -45,8 +45,69 @@ export const socialMedia = [
   },
 ];
 
-export const navLinksClass =
-  "transition-all hover:scale-105 hover:text-black dark:hover:text-dark-secondary";
-
-export const sideLinksClass =
-  "transition-all hover:-translate-y-1 hover:text-black dark:hover:text-dark-secondary";
+export const technologies = [
+  {
+    name: "html",
+    src: "https://skillicons.dev/icons?i=html",
+  },
+  {
+    name: "css",
+    src: "https://skillicons.dev/icons?i=css",
+  },
+  {
+    name: "javascript",
+    src: "https://skillicons.dev/icons?i=js",
+  },
+  {
+    name: "typescript",
+    src: "https://skillicons.dev/icons?i=ts",
+  },
+  {
+    name: "react",
+    src: "https://skillicons.dev/icons?i=react",
+  },
+  {
+    name: "next",
+    src: "https://skillicons.dev/icons?i=next",
+  },
+  {
+    name: "python",
+    src: "https://skillicons.dev/icons?i=python",
+  },
+  {
+    name: "django",
+    src: "https://skillicons.dev/icons?i=django",
+  },
+  {
+    name: "postgres",
+    src: "https://skillicons.dev/icons?i=postgres",
+  },
+  {
+    name: "mongodb",
+    src: "https://skillicons.dev/icons?i=mongo",
+  },
+  {
+    name: "docker",
+    src: "https://skillicons.dev/icons?i=docker",
+  },
+  {
+    name: "aws",
+    src: "https://skillicons.dev/icons?i=aws",
+  },
+  // {
+  //   name: "azure",
+  //   src: "https://skillicons.dev/icons?i=azure",
+  // },
+  // {
+  //   name: "postman",
+  //   src: "https://skillicons.dev/icons?i=postman",
+  // },
+  // {
+  //   name: "tailwind",
+  //   src: "https://skillicons.dev/icons?i=tailwind",
+  // },
+  // {
+  //   name: "mui",
+  //   src: "https://skillicons.dev/icons?i=mui",
+  // },
+];
