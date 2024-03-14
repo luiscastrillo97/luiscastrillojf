@@ -1,39 +1,30 @@
+"use client";
+import { SectionTitle } from "../titlesAndParagraphs";
+import { ExperienceContents, NavBar } from "../experience";
 import { workExperience } from "@/config";
+import { useEffect, useState } from "react";
+import { ExperienceContent } from "@/interfaces";
+
 const Experience = () => {
+  const [data, setData] = useState<ExperienceContent[]>([]);
+
+  const getData = (current: string = "current") => {
+    const experience = workExperience.filter(({ id }) => current === id);
+    setData(experience[0].content);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
-    <section id="jobs" className="py-24">
-      <div className="mx-auto max-w-[700px]">
-        <h2 className="text-3xl pb-5">Where I Have Worked</h2>
-        <div className="flex">
-          <div className="w-2/5 flex flex-col items-start">
-            {workExperience.map(({ name }, index) => (
-              <button key={index} type="button" className="p-2 border-l-2 ">
-                {name}
-              </button>
-            ))}
-          </div>
-          <div className="w-full flex flex-col gap-5">
-            <div>
-              <h3>Monitoring systems developer</h3>
-              <h3>Oct 2021 - Jun 2023</h3>
-              <p>
-                Implement a wireless sensor network to monitor the conditions of
-                banana crops in Magdalena, taking data such as temperature,
-                humidity, among others.
-              </p>
-            </div>
-            <div>
-              <h3>Electronic Engineer</h3>
-              <h3>Nov 2023 - Dec 2023</h3>
-              <p>
-                Develop literature reviews in Scopus and Web of Science using
-                search equations to perform bibliometric analysis, create
-                co-occurrence maps and present the results visually. In
-                addition, review and conduct technical reports and papers on
-                solar farm decommissioning to identify and compile current best
-                practices and recommendations.
-              </p>
-            </div>
+    <section id="jobs" className="w-full flex justify-center py-24">
+      <div className="w-full flex flex-col items-center md:max-w-[700px]">
+        <SectionTitle title="Where I Have Worked" />
+        <div className="max-w-full flex flex-col justify-between gap-10 sm:flex-row">
+          <NavBar getData={getData} />
+          <div className="w-full flex flex-col gap-5 sm:w-3/5 ">
+            <ExperienceContents content={data} />
           </div>
         </div>
       </div>
