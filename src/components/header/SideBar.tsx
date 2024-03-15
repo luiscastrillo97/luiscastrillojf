@@ -1,12 +1,16 @@
 "use client";
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { useMouseDown } from "@/hooks/useMouseDown";
 import { defaultBreakpoints, useMediaQuery } from "@/hooks/useMediaQuery";
 import SwitchTheme from "./SwitchTheme";
 import NavLinks from "./NavLinks";
 import MenuButton from "./MenuButton";
 
-const SideBar = () => {
+interface Props {
+  setIsSideBarShowed: Dispatch<SetStateAction<boolean>>;
+}
+
+const SideBar = ({ setIsSideBarShowed }: Props) => {
   const [showSideBar, setShowSideBar] = useState(false);
   const mainLayoutElement =
     typeof document !== "undefined" && document.querySelector("#main-layout");
@@ -14,6 +18,7 @@ const SideBar = () => {
     typeof document !== "undefined" && document.querySelector("#layout-body");
 
   const handleOnClick = () => {
+    setIsSideBarShowed(!showSideBar);
     setShowSideBar(!showSideBar);
   };
 
@@ -32,6 +37,7 @@ const SideBar = () => {
   const addClasses = () => {
     if (mainLayoutElement && layoutElement) {
       mainLayoutElement.classList.add("blur-md");
+      mainLayoutElement.classList.add("pointer-events-none");
       layoutElement?.classList.add("overflow-y-hidden");
     }
   };
@@ -39,6 +45,7 @@ const SideBar = () => {
   const removeClasses = () => {
     if (mainLayoutElement && layoutElement) {
       mainLayoutElement.classList.remove("blur-md");
+      mainLayoutElement.classList.remove("pointer-events-none");
       layoutElement.classList.remove("overflow-y-hidden");
     }
   };
