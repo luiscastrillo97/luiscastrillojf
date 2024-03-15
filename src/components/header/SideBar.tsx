@@ -26,7 +26,7 @@ const SideBar = ({ setIsSideBarShowed }: Props) => {
   const hideSideBar = useCallback(() => {
     setIsSideBarShowed(false);
     setShowSideBar(false);
-  }, [setIsSideBarShowed]);
+  }, [setIsSideBarShowed, setShowSideBar]);
 
   const handleOnClick = () => {
     setIsSideBarShowed(!showSideBar);
@@ -65,6 +65,7 @@ const SideBar = ({ setIsSideBarShowed }: Props) => {
     if (showSideBar) {
       addClasses();
     } else {
+      setIsSideBarShowed(false);
       removeClasses();
     }
   }, [
@@ -73,6 +74,7 @@ const SideBar = ({ setIsSideBarShowed }: Props) => {
     layoutElement,
     addClasses,
     removeClasses,
+    setIsSideBarShowed,
   ]);
 
   return (
