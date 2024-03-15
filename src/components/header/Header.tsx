@@ -30,7 +30,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
-  }, [controlNavbar, onTop]);
+  }, [controlNavbar, onTop, isSideBarShowed]);
 
   return (
     <>

@@ -1,5 +1,11 @@
 "use client";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 import { useMouseDown } from "@/hooks/useMouseDown";
 import { defaultBreakpoints, useMediaQuery } from "@/hooks/useMediaQuery";
 import SwitchTheme from "./SwitchTheme";
@@ -17,38 +23,43 @@ const SideBar = ({ setIsSideBarShowed }: Props) => {
   const layoutElement =
     typeof document !== "undefined" && document.querySelector("#layout-body");
 
+  const hideSideBar = useCallback(() => {
+    setIsSideBarShowed(false);
+    setShowSideBar(false);
+  }, [setIsSideBarShowed]);
+
   const handleOnClick = () => {
     setIsSideBarShowed(!showSideBar);
     setShowSideBar(!showSideBar);
   };
 
   const { ref } = useMouseDown(() => {
-    setShowSideBar(false);
+    hideSideBar();
   }, []);
 
   const isMd = useMediaQuery(defaultBreakpoints.md);
 
   useEffect(() => {
     if (isMd) {
-      setShowSideBar(false);
+      hideSideBar();
     }
-  }, [isMd]);
+  }, [isMd, setIsSideBarShowed, showSideBar, hideSideBar]);
 
-  const addClasses = () => {
+  const addClasses = useCallback(() => {
     if (mainLayoutElement && layoutElement) {
       mainLayoutElement.classList.add("blur-md");
       mainLayoutElement.classList.add("pointer-events-none");
       layoutElement?.classList.add("overflow-y-hidden");
     }
-  };
+  }, [layoutElement, mainLayoutElement]);
 
-  const removeClasses = () => {
+  const removeClasses = useCallback(() => {
     if (mainLayoutElement && layoutElement) {
       mainLayoutElement.classList.remove("blur-md");
       mainLayoutElement.classList.remove("pointer-events-none");
       layoutElement.classList.remove("overflow-y-hidden");
     }
-  };
+  }, [layoutElement, mainLayoutElement]);
 
   useEffect(() => {
     if (showSideBar) {
@@ -56,7 +67,13 @@ const SideBar = ({ setIsSideBarShowed }: Props) => {
     } else {
       removeClasses();
     }
-  }, [showSideBar, mainLayoutElement, layoutElement]);
+  }, [
+    showSideBar,
+    mainLayoutElement,
+    layoutElement,
+    addClasses,
+    removeClasses,
+  ]);
 
   return (
     <div ref={ref} id="side-bar" className="contents md:hidden">
