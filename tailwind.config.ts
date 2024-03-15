@@ -32,7 +32,8 @@ const config: Config = {
       backgroundColor: {
         primary: "#DCF2F1",
         secondary: "#B4D4FF",
-        tertiary: "#0F1035",
+        tertiary: "#86B6F6",
+        quaternary: "#0F1035",
         "dark-primary": "#070F2B",
         "dark-secondary": "#1B1A55",
         "dark-tertiary": "#B4D4FF",

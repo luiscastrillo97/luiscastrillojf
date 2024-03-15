@@ -8,7 +8,7 @@ const LeftSide = () => {
           <div className="flex flex-col gap-8">
             <SocialMediaIcons />
           </div>
-          <div className="h-24 bg-tertiary dark:bg-dark-tertiary w-0.5"></div>
+          <div className="h-24 bg-quaternary dark:bg-dark-tertiary w-0.5"></div>
         </div>
       </div>
     </div>

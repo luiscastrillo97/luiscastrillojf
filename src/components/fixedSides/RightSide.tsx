@@ -1,4 +1,3 @@
-import { sideLinksClass } from "@/config";
 import React from "react";
 
 const RightSide = () => {
@@ -14,7 +13,7 @@ const RightSide = () => {
               luiscastrillojfgmail.com
             </a>
           </div>
-          <div className="h-24 bg-tertiary dark:bg-dark-tertiary w-0.5"></div>
+          <div className="h-24 bg-quaternary dark:bg-dark-tertiary w-0.5"></div>
         </div>
       </div>
     </div>
