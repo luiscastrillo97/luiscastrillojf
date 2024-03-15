@@ -1,8 +1,15 @@
 import { FiGithub, FiLinkedin, FiInstagram } from "react-icons/fi";
 import { FaXTwitter } from "react-icons/fa6";
+import { MdOpenInNew } from "react-icons/md";
 
+export type SocialMediaIcon =
+  | "github"
+  | "linkedin"
+  | "instagram"
+  | "twitter"
+  | "openLink";
 interface Props {
-  name: string;
+  name: SocialMediaIcon;
   size?: number;
 }
 
@@ -19,6 +26,9 @@ const SocialIcon = ({ name, size = 20 }: Props) => {
       break;
     case "twitter":
       return <FaXTwitter size={size} />;
+      break;
+    case "openLink":
+      return <MdOpenInNew size={22} />;
       break;
     default:
       break;

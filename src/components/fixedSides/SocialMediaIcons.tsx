@@ -1,4 +1,4 @@
-import { sideLinksClass, socialMedia } from "@/config";
+import { socialMedia } from "@/config";
 import SocialIcon from "./SocialIcon";
 
 const SocialMediaIcons = () => {

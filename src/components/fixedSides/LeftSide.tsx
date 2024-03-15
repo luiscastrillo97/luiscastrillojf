@@ -1,5 +1,3 @@
-import { FiGithub, FiLinkedin, FiInstagram } from "react-icons/fi";
-import { FaXTwitter } from "react-icons/fa6";
 import SocialMediaIcons from "./SocialMediaIcons";
 
 const LeftSide = () => {
