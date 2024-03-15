@@ -2,20 +2,19 @@
 import { SectionTitle } from "../titlesAndParagraphs";
 import { ExperienceContents, NavBar } from "../experience";
 import { workExperience } from "@/config";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ExperienceContent } from "@/interfaces";
 
 const Experience = () => {
-  const [data, setData] = useState<ExperienceContent[]>([]);
+  const initialExperience = workExperience.filter(
+    ({ id }) => id === "current"
+  )[0].content;
+  const [data, setData] = useState<ExperienceContent[]>(initialExperience);
 
   const getData = (current: string = "current") => {
     const experience = workExperience.filter(({ id }) => current === id);
     setData(experience[0].content);
   };
-
-  useEffect(() => {
-    getData();
-  }, []);
 
   return (
     <section id="jobs" className="w-full flex justify-center py-24">

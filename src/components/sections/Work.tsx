@@ -4,11 +4,12 @@ import simpleTodo from "@/content/projects/images/simple-todo.png";
 import advanceTodo from "@/content/projects/images/advance-todo-light.png";
 import { FiGithub } from "react-icons/fi";
 import { MdOpenInNew } from "react-icons/md";
+import { SectionTitle } from "../titlesAndParagraphs";
 
 const Work = () => {
   return (
     <section id="projects" className="py-24 h-fit flex flex-col">
-      <h2 className="text-3xl">Some Things I Have Built</h2>
+      <SectionTitle title="Showtime" />
       <article className="mt-10">
         <div className="grid grid-cols-12">
           <div

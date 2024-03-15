@@ -3,11 +3,10 @@ const nextConfig = {
   images: {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: ["skillicons.dev"],
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**",
+        hostname: "skillicons.dev",
       },
     ],
   },
