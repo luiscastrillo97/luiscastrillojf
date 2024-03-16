@@ -1,8 +1,12 @@
+import { NormalButton } from "../buttons";
+
 const Contact = () => {
   return (
     <section id="contact" className="py-24 flex justify-center">
       <div className="max-w-xl text-center">
-        <h2 className="text-3xl mb-10 w-full">Get In Touch</h2>
+        <h2 className="mb-10 w-full text-clamp-h2 font-semibold">
+          Get In Touch
+        </h2>
         <div className="flex flex-col gap-10">
           <p>
             I’m currently looking for any new opportunities, so, my inbox is
@@ -10,12 +14,9 @@ const Contact = () => {
             I’ll try my best to get back to you!
           </p>
           <div>
-            <button
-              type="button"
-              className="p-3 bg-blue-600 rounded-md text-white"
-            >
+            <NormalButton href="mailto:luiscastrillojfgmail.com">
               Say Hi!
-            </button>
+            </NormalButton>
           </div>
         </div>
       </div>

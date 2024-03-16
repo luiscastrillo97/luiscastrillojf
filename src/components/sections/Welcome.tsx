@@ -1,3 +1,5 @@
+import { NormalButton } from "../buttons";
+
 const WelcomeSection = () => {
   return (
     <section className="flex flex-col items-start justify-center pt-28 h-auto min-h-screen gap-5">
@@ -24,12 +26,9 @@ const WelcomeSection = () => {
         </p>
       </div>
       <div>
-        <button
-          type="button"
-          className="p-3 bg-primary text-primary font-semibold rounded-md border border-primary hover:bg-secondary dark:text-dark-primary dark:bg-dark-primary dark:border-dark-primary dark:hover:bg-dark-secondary"
-        >
+        <NormalButton href="https://www.canva.com/design/DAF_n2AvN8M/c484bT1o2RsCVc1qNVAM5w/view?utm_content=DAF_n2AvN8M&utm_campaign=designshare&utm_medium=link&utm_source=editor">
           Resume
-        </button>
+        </NormalButton>
       </div>
     </section>
   );
