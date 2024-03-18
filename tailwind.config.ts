@@ -42,6 +42,10 @@ const config: Config = {
         primary: "#0F1035",
         "dark-primary": "#B4D4FF",
       },
+      fill: {
+        primary: "#0F1035",
+        "dark-primary": "#B4D4FF",
+      },
     },
   },
   plugins: [],

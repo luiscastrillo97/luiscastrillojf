@@ -17,6 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link
+          rel="icon"
+          href="/images/logo.png"
+          type="image/png"
+          sizes="512x509"
+        />
+      </head>
       <body
         id="layout-body"
         className={`${inter.className} bg-primary min-h-screen min-w-screen text-primary overflow-x-hidden dark:bg-dark-primary dark:text-dark-primary transition-color ease-[cubic-bezier(0.645,0.045,0.355,1)] duration-300`}

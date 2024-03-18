@@ -2,7 +2,7 @@ import { Button } from "@/components/button";
 
 const Welcome = () => {
   return (
-    <section className="flex flex-col items-start justify-center pt-28 h-auto min-h-screen gap-5">
+    <section className="flex flex-col items-start justify-center pt-28 h-auto min-h-screen gap-4">
       <div>
         <h5 className="text-base md:text-lg">Hi, my name is</h5>
       </div>
@@ -25,7 +25,7 @@ const Welcome = () => {
           these problems.
         </p>
       </div>
-      <div>
+      <div className="pt-2">
         <Button href="https://www.canva.com/design/DAF_n2AvN8M/c484bT1o2RsCVc1qNVAM5w/view?utm_content=DAF_n2AvN8M&utm_campaign=designshare&utm_medium=link&utm_source=editor">
           Resume
         </Button>
