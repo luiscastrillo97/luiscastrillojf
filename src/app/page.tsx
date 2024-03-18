@@ -1,13 +1,13 @@
+import { Footer } from "@/components";
 import {
   About,
   Contact,
   Experience,
   FixedSides,
-  Footer,
   Header,
+  Projects,
   Welcome,
-  Work,
-} from "@/components";
+} from "@/features";
 import { MainLayout } from "@/layouts";
 
 const Root = () => {
@@ -19,7 +19,7 @@ const Root = () => {
         <Welcome />
         <About />
         <Experience />
-        <Work />
+        <Projects />
         <Contact />
         <Footer />
       </MainLayout>

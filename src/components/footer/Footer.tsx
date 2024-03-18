@@ -1,11 +1,11 @@
-import SocialMediaIcons from "../fixedSides/SocialMediaIcons";
+import { SocialMediaList } from "@/components";
 
 const Footer = () => {
   return (
     <footer className="py-10">
       <div className="text-center flex flex-col items-center gap-5">
         <div className="flex justify-center items-center gap-5 md:hidden">
-          <SocialMediaIcons />
+          <SocialMediaList />
         </div>
         <a
           href="https://github.com/luiscastrillo97/luiscastrillojf"
